@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management Dashboard</title>
+    <link rel="stylesheet" href="jsview.css">
+</head>
+<body>
+    <h1>Patient Dashboard</h1>
+    <div class="button-row">
+        <button onclick="showForm('register')">Register New Patient</button>
+        <button onclick="showForm('update')">Update Patient Details</button>
+        <button onclick="showAllPatients()">Show All Patients</button>
+        <button onclick="showForm('delete')">Delete Patient</button>
+    </div>
+
+    <div id="formContainer"></div>
+    <table id="patientsTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Room Number</th>
+                <th>Doctor ID</th>
+                <th>Doctor Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Blood Group</th>
+                <th>Address</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Patient data will be filled in here -->
+        </tbody>
+    </table>
+
+    <script src="jsview.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hospitl Management Login</title>
+<link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+<script src="login.js"></script>
+<div classs="main">
+<h1>Hospital Management System<h1>
+<h3>Enter your login credntials</h3>
+<form onsubmit="return login(event)">
+<label for ="first">
+User Id:
+</label>
+<input type="alpha" id="first" name="first" minlength="8" placeholder="Enter your UserID" required>
+<label for 'psw'> Password: </label> 
+<input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" title="Must contain atleast one numeric and one uppercase and special character with atleast 10 characters." placeholder="Enter your password"  required>
+<div class="wrap">
+<button type="submit">Login </button>
+</div>
+</form>
+<p>
+</body>

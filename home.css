@@ -1,0 +1,25 @@
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.center {text-align: center;
+padding-top: 220px;
+font-size: 38px;
+font-weight: bold;
+line-height: 35px;
+border-radius: 14px;
+opacity: 0.5;
+}

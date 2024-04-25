@@ -1,0 +1,60 @@
+function showAdmin() {
+    document.querySelector('.admin-container').style.display = 'block';
+    document.querySelector('.UnderWriter-container').style.display = 'none';
+}
+
+function showUnderWriter() {
+    document.querySelector('.admin-container').style.display = 'none';
+    document.querySelector('.UnderWriter-container').style.display = 'block';
+}
+
+// Predefined admin credentials
+const adminUsername = "admin";
+const adminPassword = "admin123";
+
+function adminLogin(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+    const username = document.getElementById('username-ad').value;
+    const password = document.getElementById('password-ad').value;
+
+    if (username === adminUsername && password === adminPassword) {
+        alert("Admin login successful!");
+        // Redirect to home.html
+        window.location.href = "AdminHome.html";
+    } else {
+        alert("Invalid credentials. Please try again.");
+    }
+    return false;
+}
+function underWriterLogin(event) {
+    event.preventDefault();  // Prevent the form from submitting normally to keep the page from refreshing
+
+    // Retrieve input values from the form
+    const inputId = document.getElementById('username-uw').value;
+    const inputPassword = document.getElementById('password-uw').value;
+
+    // Attempt to retrieve and parse the 'underwriters' array from local storage
+    const storedUnderwriters = JSON.parse(localStorage.getItem('underwriters')) || [];
+    console.log(storedUnderwriters)
+
+    // Find an underwriter whose ID and password match the input values
+    const matchingUnderwriter = storedUnderwriters.find(underwriter => 
+        underwriter.id === parseInt(inputId, 10) &&  // Convert inputId to a number
+        underwriter.password === inputPassword
+    );
+    
+
+    // Redirect or alert based on whether a matching underwriter was found
+    if (matchingUnderwriter) {
+        alert("Login successful!");
+        window.location.href = "UnderWriterHome.html"; // Redirect to the UnderWriter's home page
+    } else {
+        alert("Invalid ID or password. Please try again.");
+    }
+
+    return false;  // Return false to prevent further form submission behavior
+}
+
+
+
+
